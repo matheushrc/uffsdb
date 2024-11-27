@@ -1,5 +1,5 @@
 # uffsdb
-A simple educational DBMS
+A simple educational DBMS (from UFFS)
 
 # how to comipile
  uffsdb/Fonte/make
