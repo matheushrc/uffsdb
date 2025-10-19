@@ -1210,6 +1210,13 @@ void createTable(rc_insert *t) {
   		size = sizeof(double);
     else if(t->type[i] == 'C')
   		size = sizeof(char);
+    
+    if (size <= 0)
+    {
+        printf("ERROR: attribute \"%s\" has invalid size (%d)\n", t->columnName[i], size);
+        freeTable(tab);
+        return;
+    }
 
     if(t->attribute[i] == PK) {
         PKcount++;
